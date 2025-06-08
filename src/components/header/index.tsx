@@ -1,5 +1,4 @@
 import React, { JSX } from "react";
-import { Button } from "../../components/ui/button";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -10,7 +9,7 @@ import Image from "next/image";
 export const Header = (): JSX.Element => {
   // Navigation items data
   const navItems = [
-    { label: "Sobre", active: true },
+    { label: "Sobre", active: false },
     { label: "Nossos Serviços", active: false },
     { label: "Contato", active: false },
     { label: "Resultado", active: false },
@@ -18,7 +17,7 @@ export const Header = (): JSX.Element => {
 
   return (
     <header
-      className="flex justify-center items-center relative h-[90px] w-full max-w-[100vw] min-w-[100vw] overflow-hidden bg-[#333693cc] border-b border-real-impact300"
+      className="flex justify-center items-center relative h-[90px] max-[441px]:h-[56px] w-full max-w-[100vw] min-w-[100vw] overflow-hidden bg-[#333693cc] max-[441px]:bg-[#333693] border-b border-real-impact300"
       data-model-id="1:730"
     >
       <div className="w-full max-w-[90%] flex h-full items-center justify-between ">
@@ -28,7 +27,7 @@ export const Header = (): JSX.Element => {
           src="/logos/armo-logo.svg"
           width={225}
           height={38}
-          className="min-w-[225px]"
+          className="max-w-[225px] max-[769px]:max-w-[130px] min-w-[10vw]"
         />
 
         {/* Navigation */}
@@ -49,12 +48,15 @@ export const Header = (): JSX.Element => {
         </NavigationMenu>
 
         {/* Contact Button */}
-        <Button
-          variant={"default"}
-          className="h-auto rounded-lg px-6 py-4 [font-family:'Integral_CF-DemiBold',Helvetica] font-bold text-base tracking-[0px] text-[#313372] uppercase"
-        >
-          Entrar em contato
-        </Button>
+        <button className="flex justify-center items-center px-[3%] bg-[#F8F8F8] h-[43px] max-[769px]:h-[32px] rounded-[8px] ">
+          <Image
+            alt="Logo ARMO PNG RGB"
+            src="/sections/header/cta-text.svg"
+            width={225}
+            height={38}
+            className="max-w-[225px] max-[769px]:max-w-[130px] min-w-[10vw]"
+          />
+        </button>
       </div>
     </header>
   );

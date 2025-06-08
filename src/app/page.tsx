@@ -1,4 +1,5 @@
 import { Header } from "@/components/header";
+import { Footer } from "@/components/screens/footer";
 import { Section1 } from "@/components/screens/section-1";
 import { Section2 } from "@/components/screens/section-2";
 import { Section3 } from "@/components/screens/section-3";
@@ -19,6 +20,7 @@ export default function Home() {
       <Section3 />
       <Section4 />
       <Section5 />
+      <Footer />
     </main>
   );
 }
