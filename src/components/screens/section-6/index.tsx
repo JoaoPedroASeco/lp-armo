@@ -1,18 +1,23 @@
+"use client";
+
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 import Image from "next/image";
 
 export const Section6 = () => {
+  const { is768 } = useMediaQuery();
+
   return (
     <section
       className="flex flex-col w-full h-full min-h-[969px] justify-center items-center relative z-[3]"
       style={{
-        backgroundImage: "url(/sections/6/bg.png)",
+        backgroundImage: `url(/sections/6/${is768 ? "mobile/" : ""}bg.svg)`,
         backgroundSize: "cover",
         backgroundPosition: "top",
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="flex justify-between items-center absolute z-1 w-full h-full max-w-[72%] mx-auto">
-        <div>
+      <div className="flex max-[769px]:flex-col justify-between max-[769px]:justify-center items-center absolute z-1 w-full h-full max-w-[68.80%] max-[769px]:max-w-[100%] px-4 mx-auto max-[769px]:gap-[44px]">
+        <div className="flex w-full max-[769px]:max-w-[400px] max-[769px]:justify-center max-[769px]:items-center flex-col">
           <Image
             src={"/sections/6/icon.svg"}
             width={64}
@@ -22,14 +27,14 @@ export const Section6 = () => {
           />
 
           <Image
-            src={"/sections/6/headline.svg"}
+            src={`/sections/6/${is768 ? "mobile/" : ""}headline.svg`}
             width={558}
             height={168}
             alt=""
             className="mb-14"
           />
 
-          <button className="bg-gradient-to-bl from-[#7500CD] to-[#333693]  text-[#FFFFFF] font-bold py-6 px-12 rounded-[20px]">
+          <button className="flex justify-center items-center w-full max-w-[75%] max-[769px]:max-w-full h-[62px] px-[8%] bg-gradient-to-bl from-[#7500CD] to-[#333693]  text-[#FFFFFF] font-bold rounded-[20px]">
             <Image
               src={"/sections/6/cta-text.svg"}
               width={253}
@@ -38,7 +43,8 @@ export const Section6 = () => {
             />
           </button>
         </div>
-        <div className="flex min-w-[588px] min-h-[600px] bg-[#6064C9]"></div>
+
+        <div className="flex min-w-[35vw] max-[769px]:min-w-[70%] max-[441px]:min-w-[100%] max-[441px]:min-h-[550px] bg-[#6064C9] aspect-square max-[441px]:aspect-auto rounded-[6%]"></div>
       </div>
     </section>
   );
