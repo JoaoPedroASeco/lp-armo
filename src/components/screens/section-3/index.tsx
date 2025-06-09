@@ -119,6 +119,7 @@ export const Section3 = () => {
 
   return (
     <section
+      id="our-services"
       className="flex flex-col w-full h-full justify-center items-center relative z-[3]"
       style={{
         backgroundImage: `url(/sections/3/${is768 ? "mobile/" : ""}bg.svg)`,

@@ -7,7 +7,10 @@ export const Section4 = () => {
   const { is768 } = useMediaQuery();
 
   return (
-    <section className="flex flex-col w-full h-fit min-h-screen max-h-[100vh] justify-center items-center relative bg-[#03042C]">
+    <section
+      id="results"
+      className="flex flex-col w-full h-fit min-h-screen max-h-[100vh] justify-center items-center relative bg-[#03042C]"
+    >
       <div className="flex flex-col justify-center items-center absolute z-1 w-full h-full max-w-[68.80%] max-[769px]:max-w-[100%] mx-auto">
         <div className="flex flex-col justify-center items-center gap-6 mb-[45px]">
           <Image src={"/sections/5/icon.svg"} width={64} height={64} alt="" />

@@ -7,12 +7,11 @@ import {
 import Image from "next/image";
 
 export const Header = (): JSX.Element => {
-  // Navigation items data
   const navItems = [
-    { label: "Sobre", active: false },
-    { label: "Nossos Serviços", active: false },
-    { label: "Contato", active: false },
-    { label: "Resultado", active: false },
+    { label: "Sobre", active: false, href: "#about" },
+    { label: "Nossos Serviços", active: false, href: "#our-services" },
+    { label: "Contato", active: false, href: "#contact" },
+    { label: "Resultado", active: false, href: "#results" },
   ];
 
   return (
@@ -35,6 +34,7 @@ export const Header = (): JSX.Element => {
           {navItems.map((item, index) => (
             <NavigationMenuItem key={index} className="list-none w-full">
               <NavigationMenuLink
+                href={item.href}
                 className={`text-lg tracking-[1.00px] leading-8 whitespace-nowrap  ${
                   item.active
                     ? "[font-family:'Helvetica_Now_Display-Bold',Helvetica] font-bold text-[#F8F8F8] underline"

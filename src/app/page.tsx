@@ -19,6 +19,7 @@ export default function Home() {
       <Section2 />
       <Section3 />
       <Section4 />
+      <section id="contact"></section>
       <Section6 />
       <Footer />
     </main>

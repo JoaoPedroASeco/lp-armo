@@ -10,6 +10,7 @@ export const Section1 = () => {
 
   return (
     <section
+      id="#home"
       className="flex flex-col w-full h-fit justify-center items-center relative max-[769px]:h-[155vh] max-[441px]:h-[89vh] max-[441px]:min-h-[790px] "
       style={
         is768
