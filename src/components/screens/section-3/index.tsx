@@ -4,7 +4,7 @@ import { useMediaQuery } from "@/hooks/useMediaQuery";
 import Image from "next/image";
 
 const Var1 = ({ item }: { item: number }) => {
-  const { is768 } = useMediaQuery();
+  const { is1024, is768 } = useMediaQuery();
 
   return (
     <>
@@ -14,11 +14,11 @@ const Var1 = ({ item }: { item: number }) => {
             src={`/sections/3/cards/${item}/icon.svg`}
             width={43}
             height={43}
-            alt="min-w-[43px] min-h-[43px]"
+            alt="max-w-[43px]"
           />
           <Image
             src={`/sections/3/cards/${item}/${
-              is768 ? "mobile/" : ""
+              is1024 ? "mobile/" : ""
             }icon-headline.svg`}
             width={291}
             height={43}
@@ -55,7 +55,7 @@ const Var1 = ({ item }: { item: number }) => {
         width={650}
         height={388}
         alt=""
-        className="z-1"
+        className="z-1 max-w-[50%] max-[769px]:max-w-full"
       />
     </>
   );
@@ -69,7 +69,7 @@ const Var2 = ({ item }: { item: number }) => {
         width={650}
         height={388}
         alt=""
-        className="z-1"
+        className="z-1 max-w-[50%] max-[769px]:max-w-full"
       />
 
       <div className="flex flex-col gap-6">
@@ -79,12 +79,14 @@ const Var2 = ({ item }: { item: number }) => {
             width={43}
             height={43}
             alt=""
+            className=""
           />
           <Image
             src={`/sections/3/cards/${item}/icon-headline.svg`}
             width={291}
             height={43}
             alt=""
+            className=""
           />
         </div>
         <div className="flex flex-col gap-4">
@@ -94,6 +96,7 @@ const Var2 = ({ item }: { item: number }) => {
               width={611}
               height={58}
               alt=""
+              className=""
             />
           </h2>
           <p>
@@ -102,6 +105,7 @@ const Var2 = ({ item }: { item: number }) => {
               width={611}
               height={58}
               alt=""
+              className=""
             />
           </p>
         </div>
@@ -132,19 +136,19 @@ export const Section3 = () => {
           className="mt-[-65px] max-w-[90%] max-[769px]:mt-0 max-[769px]:absolute max-[769px] top-[-1.5%]"
         />
 
-        <ul className="flex flex-col h-full mt-[35.3%] gap-20 max-[441px]:gap-[80px] max-[376px]:gap-[55px] z-1">
+        <ul className="flex flex-col h-full mt-[10vh] max-[1601px]:mt-[11vh] max-[1441px]:mt-[12vh] max-[1025px]:mt-[15vh] max-[769px]:mt-[35.3%] gap-[96px] max-[769px]:gap-[240px] max-[441px]:gap-[80px] max-[376px]:gap-[55px] z-1">
           {[1, 2, 3, 4, 5].map((item) =>
             !is768 ? (
               <li
                 key={item}
-                className="flex justify-between items-center gap-[60px] max-[441px]:gap-8 max-[769px]:flex-col-reverse"
+                className="flex justify-between items-center gap-[60px] max-[769px]:gap-[110px] max-[441px]:gap-8 max-[769px]:flex-col-reverse"
               >
                 {item % 2 !== 0 ? <Var1 item={item} /> : <Var2 item={item} />}
               </li>
             ) : (
               <li
                 key={item}
-                className="flex justify-between items-center gap-[60px] max-[441px]:gap-8 max-[769px]:flex-col-reverse"
+                className="flex justify-between items-center gap-[60px] max-[769px]:gap-[110px] max-[441px]:gap-8 max-[769px]:flex-col-reverse"
               >
                 <Var1 item={item} />
               </li>

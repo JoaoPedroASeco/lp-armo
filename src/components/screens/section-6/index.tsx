@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export const Section5 = () => {
+export const Section6 = () => {
   return (
     <section
       className="flex flex-col w-full h-full min-h-[969px] justify-center items-center relative z-[3]"
