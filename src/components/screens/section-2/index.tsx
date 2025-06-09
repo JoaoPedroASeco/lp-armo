@@ -8,7 +8,7 @@ export const Section2 = () => {
 
   return (
     <section
-      className="flex flex-col w-full max-h-[839px] h-[80vh] max-[1441px]:h-[90vh] max-[769px]:h-[100vh] max-[441px]:max-h-[560px] justify-center items-center relative"
+      className="flex flex-col w-full max-h-[839px] h-[80vh] max-[1441px]:h-[90vh] max-[769px]:h-[100vh] max-[441px]:max-h-[560px] max-[441px]:min-h-[560px] justify-center items-center relative"
       style={{
         backgroundImage: "url(/sections/2/bg.svg)",
         backgroundSize: "cover",
