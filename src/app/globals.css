@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+* {
+  input::placeholder,
+  textarea::placeholder,
+  select {
+    color: #6064c9;
+  }
+}

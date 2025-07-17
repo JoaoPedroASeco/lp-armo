@@ -44,7 +44,13 @@ export const Section6 = () => {
           </button>
         </div>
 
-        <div className="flex min-w-[35vw] max-[769px]:min-w-[70%] max-[441px]:min-w-[100%] max-[441px]:min-h-[550px] bg-[#6064C9] aspect-square max-[441px]:aspect-auto rounded-[6%]"></div>
+        <Image
+          src={"/sections/6/cell-icon.png"}
+          width={754}
+          height={738}
+          alt=""
+          className=" max-w-[60%] w-full max-[769px]:max-w-[400px]"
+        />
       </div>
     </section>
   );

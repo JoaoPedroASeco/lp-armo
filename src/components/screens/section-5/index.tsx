@@ -2,6 +2,7 @@
 
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import Image from "next/image";
+import { ContactForm } from "./Form";
 
 export const Section5 = () => {
   const { is768 } = useMediaQuery();
@@ -24,6 +25,8 @@ export const Section5 = () => {
           height={144}
           alt="headline"
         />
+
+        <ContactForm />
       </div>
     </section>
   );
