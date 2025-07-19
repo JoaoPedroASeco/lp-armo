@@ -17,8 +17,6 @@ const authObj = {
   client_id: "108626050435471245475",
   auth_uri: "https://accounts.google.com/o/oauth2/auth",
   token_uri: "https://oauth2.googleapis.com/token",
-    "https://www.googleapis.com/robot/v1/metadata/x509/teste-464%40landingpage-461118.iam.gserviceaccount.com",
-  universe_domain: "googleapis.com",
   auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
   client_x509_cert_url:
     "https://www.googleapis.com/robot/v1/metadata/x509/editor-planilhas-app-267%40sheets-data-466418.iam.gserviceaccount.com",
@@ -31,13 +29,14 @@ export async function addData(props: Props) {
     scopes: ["https://www.googleapis.com/auth/spreadsheets"],
   });
 
-  const sheets = google.sheets({ version: "v4", auth });
+  const authClient = await auth.getClient();
 
+  const sheets = google.sheets({ version: "v4", auth: authClient });
   await sheets.spreadsheets.values.append({
     spreadsheetId: "1NYS9e1Zcl5R6ykzA8qw9jljrdHnk-5BXdOOzyMxRhds",
     range: "Página1",
     valueInputOption: "USER_ENTERED",
-    requestBody: {
+    resource: {
       values: [
         [
           props.fullName,
