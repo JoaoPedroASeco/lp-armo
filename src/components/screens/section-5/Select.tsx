@@ -17,6 +17,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
           error ? "border-red-500" : "border-gray-300"
         }`}
         {...props}
+        defaultValue={options[0].value} // Define o valor padrão como o primeiro item da lista
       >
         {options.map((option) => (
           <option key={option.value} value={option.value}>

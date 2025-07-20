@@ -15,8 +15,14 @@ export const ContactForm = () => {
   } = useForm<ContactFormData>({
     resolver: yupResolver(contactSchema),
     defaultValues: {
-      role: "",
-      companySize: "",
+      fullName: "",
+      email: "",
+      phone: "",
+      company: "",
+      role: "Cargo",
+      companySize: "Tamanho da empresa",
+      projectDetails: "",
+      field: "",
     },
   });
 
@@ -51,7 +57,8 @@ export const ContactForm = () => {
                 // exatamente qual tipo de campo está sendo renderizado.
                 switch (field.fieldType) {
                   case "input": {
-                    const { component: Component, ...props } = field;
+                    const { component: Component, fieldType, ...props } = field;
+                    console.log(fieldType);
                     return (
                       <Component
                         {...register(field.name)}
@@ -61,7 +68,8 @@ export const ContactForm = () => {
                     );
                   }
                   case "select": {
-                    const { component: Component, ...props } = field;
+                    const { component: Component, fieldType, ...props } = field;
+                    console.log(fieldType);
                     return (
                       <Component
                         {...register(field.name)}
@@ -71,7 +79,9 @@ export const ContactForm = () => {
                     );
                   }
                   case "textarea": {
-                    const { component: Component, ...props } = field;
+                    const { component: Component, fieldType, ...props } = field;
+                    console.log(fieldType);
+
                     return (
                       <Component
                         {...register(field.name)}

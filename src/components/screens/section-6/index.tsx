@@ -31,10 +31,10 @@ export const Section6 = () => {
             width={558}
             height={168}
             alt=""
-            className="mb-14"
+            className="mb-14 max-[441px]:max-w-[90%]"
           />
 
-          <button className="flex justify-center items-center w-full max-w-[75%] max-[769px]:max-w-full h-[62px] px-[8%] bg-gradient-to-bl from-[#7500CD] to-[#333693]  text-[#FFFFFF] font-bold rounded-[20px]">
+          <button className="flex justify-center items-center w-full max-w-[75%] max-[769px]:max-w-full h-[62px] px-[8%] bg-gradient-to-bl from-[#7500CD] to-[#333693]  text-[#FFFFFF] font-bold rounded-[10px] max-[441px]:max-w-[90%]">
             <Image
               src={"/sections/6/cta-text.svg"}
               width={253}
