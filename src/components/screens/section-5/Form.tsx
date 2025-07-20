@@ -39,9 +39,9 @@ export const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="mx-auto w-full max-w-2xl space-y-6 rounded-lg bg-[#6064C9] p-8 shadow-md"
+      className="mx-auto w-full space-y-6 rounded-lg bg-[#6064C9] p-8 shadow-md max-w-[563px] max-[769px]:max-w-[90%]"
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="flex flex-col gap-3">
         {formFields.map((field) => {
           // A chave (key) deve estar no elemento mais externo do loop
           return (

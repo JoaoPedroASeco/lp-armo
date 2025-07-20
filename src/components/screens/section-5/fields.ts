@@ -1,10 +1,6 @@
 import { Select, SelectProps } from "./Select";
 import { Input, InputProps } from "./Input";
-import {
-  COMPANY_ATUATION_AREA,
-  COMPANY_SIZE_OPTIONS,
-  ROLE_OPTIONS,
-} from "./constants";
+import { COMPANY_SIZE_OPTIONS, ROLE_OPTIONS } from "./constants";
 import { Textarea, TextareaProps } from "./TextArea";
 import { ContactFormData } from "./form-schema";
 import React from "react";
@@ -48,7 +44,7 @@ export const formFields: FieldConfig[] = [
     name: "fullName",
     label: "Qual é seu nome e sobrenome?",
     component: Input,
-    placeholder: "Seu Nome",
+    placeholder: "Qual é seu nome e sobrenome?",
     fieldType: "input",
   },
   {
@@ -56,22 +52,21 @@ export const formFields: FieldConfig[] = [
     label: "Qual seu principal e-mail?",
     component: Input,
     type: "email",
-    placeholder: "Email",
+    placeholder: "Qual seu principal e-mail?",
     fieldType: "input",
   },
   {
     name: "phone",
     label: "Celular",
     component: Input,
-    mask: "(99) 99999-9999",
-    placeholder: "Tel. Ex:(99) 99999-9999",
+    placeholder: "Celular",
     fieldType: "input",
   },
   {
     name: "company",
     label: "Empresa",
     component: Input,
-    placeholder: "Ex: ACME Corp",
+    placeholder: "Empresa",
     fieldType: "input",
   },
   {
@@ -91,16 +86,16 @@ export const formFields: FieldConfig[] = [
   {
     name: "field",
     label: "Área de atuação",
-    component: Select,
+    placeholder: "Área de atuação",
+    component: Input,
     layout: "col-span-1 md:col-span-2",
-    fieldType: "select",
-    options: COMPANY_ATUATION_AREA,
+    fieldType: "input",
   },
   {
     name: "projectDetails",
     label: "Detalhes do projeto...",
     component: Textarea,
-    placeholder: "Descreva brevemente sua necessidade ou projeto...",
+    placeholder: "Detalhes do projeto...",
     layout: "col-span-1 md:col-span-2",
     fieldType: "textarea",
   },

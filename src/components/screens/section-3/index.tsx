@@ -134,7 +134,7 @@ export const Section3 = () => {
           width={1139}
           height={148}
           alt=""
-          className="mt-[-65px] max-w-[90%] max-[769px]:mt-0 max-[769px]:absolute max-[769px] top-[-1.5%]"
+          className="mt-[-65px] max-w-[90%] max-[769px]:mt-0 max-[769px]:absolute max-[769px] top-[-2.1%]"
         />
 
         <ul className="flex flex-col h-full mt-[10vh] max-[1601px]:mt-[11vh] max-[1441px]:mt-[12vh] max-[1025px]:mt-[15vh] max-[769px]:mt-[35.3%] gap-[96px] max-[769px]:gap-[240px] max-[441px]:gap-[80px] max-[376px]:gap-[55px] z-1">

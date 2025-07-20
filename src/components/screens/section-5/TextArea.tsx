@@ -1,6 +1,7 @@
 import React, { TextareaHTMLAttributes, forwardRef } from "react";
 
-export interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+export interface TextareaProps
+  extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   name: string;
   error?: string;
 }
@@ -13,7 +14,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
         name={name}
         id={name}
         rows={4}
-        className={`w-full rounded-md border p-1 max-h-[90px] text-gray-800 bg-[#CBCDF6] transition-all duration-300 focus:border-blue-500 focus:outline-none ${
+        className={`w-full rounded-md border p-4 h-[107px] text-[18px] max-[769px]:text-[16px] max-[769px]:h-[169px] text-gray-800 bg-[#CBCDF6] transition-all duration-300 focus:border-blue-500 focus:outline-none ${
           error ? "border-red-500" : "border-gray-300"
         }`}
         {...props}

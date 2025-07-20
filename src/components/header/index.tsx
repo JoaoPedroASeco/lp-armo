@@ -19,7 +19,7 @@ export const Header = (): JSX.Element => {
       className="flex justify-center items-center relative h-[90px] max-[441px]:h-[56px] w-full max-w-[100vw] min-w-[100vw] overflow-hidden bg-[#333693cc] max-[441px]:bg-[#333693] border-b border-real-impact300"
       data-model-id="1:730"
     >
-      <div className="w-full max-w-[90%] flex h-full items-center justify-between ">
+      <div className="w-full max-w-[68.8%] max-[1024px]:max-w-[90%] flex h-full items-center justify-between ">
         {/* Logo */}
         <Image
           alt="Logo ARMO PNG RGB"
@@ -32,7 +32,10 @@ export const Header = (): JSX.Element => {
         {/* Navigation */}
         <NavigationMenu className="flex min-w-[50%] max-w-[50%] w-full px-5 max-[1024px]:hidden">
           {navItems.map((item, index) => (
-            <NavigationMenuItem key={index} className="list-none w-full">
+            <NavigationMenuItem
+              key={index}
+              className="flex justify-center list-none w-full"
+            >
               <NavigationMenuLink
                 href={item.href}
                 className={`text-lg tracking-[1.00px] leading-8 whitespace-nowrap  ${
