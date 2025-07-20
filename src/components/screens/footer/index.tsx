@@ -7,7 +7,7 @@ export const Footer = () => {
   const { is768 } = useMediaQuery();
 
   return (
-    <footer className="flex w-full h-fit min-h-[431px] bg-[#333693]">
+    <footer className="flex w-full h-fit min-h-[431px] bg-[#333693] pb-[50px]">
       <div className="flex flex-col justify-center items-center z-1 w-full h-full max-w-[68.80%] max-[768px]:max-w-[100%] max-[769px]:px-4 mx-auto">
         <div className="flex max-[441px]:flex-col max-[441px]:gap-[56px] w-full h-fit justify-between mt-[84px] mb-[71px] px-5">
           <Image
@@ -30,12 +30,14 @@ export const Footer = () => {
               width={180}
               height={14}
               alt=""
+              className="max-[441px]:max-w-[55%]"
             />
             <Image
               src={"/sections/footer/help-value-text.svg"}
               width={320}
               height={14}
               alt=""
+              className="max-[441px]:mt-[-6px] max-[441px]:max-w-[120%]"
             />
           </div>
 
@@ -51,12 +53,14 @@ export const Footer = () => {
               width={127}
               height={14}
               alt=""
+              className="max-[441px]:max-w-[40%]"
             />
             <Image
               src={"/sections/footer/phone-value-text.svg"}
               width={137}
               height={14}
               alt=""
+              className="max-[441px]:mt-[-6px] max-[441px]:max-w-[120%]"
             />
           </div>
 
@@ -72,12 +76,14 @@ export const Footer = () => {
               width={70}
               height={14}
               alt=""
+              className="max-[441px]:max-w-[25%]"
             />
             <Image
               src={"/sections/footer/email-value-text.svg"}
               width={246}
               height={14}
               alt=""
+              className="max-[441px]:mt-[-6px] max-[441px]:max-w-[80%]"
             />
           </div>
         </div>
