@@ -2,6 +2,7 @@
 
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import Image from "next/image";
+import Link from "next/link";
 // import motion from "framer-motion";
 
 export const Section1 = () => {
@@ -34,6 +35,19 @@ export const Section1 = () => {
         alt={""}
         className="mt-[124px] max-w-[84%] mr-[7%] max-[769px]:mt-0 max-[769px]:w-[80%] max-[769px]:mr-[0%] max-[441px]:w-[100%]"
       />
+
+      <Link
+        href={"#contact"}
+        className="flex justify-center items-center bg-gradient-to-b w-[353px] max-[1441px]:w-[300px] max-[1025px]:w-[250px]  h-[62px] max-[1441px]:h-[54px] max-[1025px]:h-[48px] rounded-[10px] from-[#7500CD] via-[#413393] to-[#333693] absolute left-[15%] top-[70%] max-[769px]:left-auto max-[769px]:top-[53%] max-[441px]:top-[47%] max-[769px]:w-[80%] max-[769px]:h-[59px] max-[441px]:h-[52px]"
+      >
+        <Image
+          src={"/sections/1/cta-txt.svg"}
+          width={257}
+          height={14}
+          alt="Queri informações"
+          className="max-w-[257px] h-[20px] max-[1441px]:h-[18px] max-[1025px]:h-[16px]"
+        />
+      </Link>
     </section>
   );
 };

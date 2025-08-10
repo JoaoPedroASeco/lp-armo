@@ -5,6 +5,7 @@ import {
   NavigationMenuLink,
 } from "../ui/navigation-menu";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Header = (): JSX.Element => {
   const navItems = [
@@ -51,7 +52,10 @@ export const Header = (): JSX.Element => {
         </NavigationMenu>
 
         {/* Contact Button */}
-        <button className="flex justify-center items-center px-[3%] bg-[#F8F8F8] h-[43px] max-[769px]:h-[32px] rounded-[8px] ">
+        <Link
+          href={"#contact"}
+          className="flex justify-center items-center px-[3%] bg-[#F8F8F8] h-[43px] max-[769px]:h-[32px] rounded-[8px] "
+        >
           <Image
             alt="Logo ARMO PNG RGB"
             src="/sections/header/cta-text.svg"
@@ -59,7 +63,7 @@ export const Header = (): JSX.Element => {
             height={38}
             className="max-w-[225px] max-[769px]:max-w-[130px] min-w-[10vw]"
           />
-        </button>
+        </Link>
       </div>
     </header>
   );

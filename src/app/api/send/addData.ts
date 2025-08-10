@@ -38,16 +38,7 @@ export async function addData(props: Props) {
     valueInputOption: "USER_ENTERED",
     resource: {
       values: [
-        [
-          props.fullName,
-          props.email,
-          props.phone,
-          props.company,
-          props.role,
-          props.companySize,
-          props.field,
-          props.projectDetails,
-        ],
+        [props.fullName, props.email, props.phone, props.company, props.field],
       ],
     },
   });

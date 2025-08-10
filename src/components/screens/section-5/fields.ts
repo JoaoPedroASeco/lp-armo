@@ -1,7 +1,6 @@
-import { Select, SelectProps } from "./Select";
+import { SelectProps } from "./Select";
 import { Input, InputProps } from "./Input";
-import { COMPANY_SIZE_OPTIONS, ROLE_OPTIONS } from "./constants";
-import { Textarea, TextareaProps } from "./TextArea";
+import { TextareaProps } from "./TextArea";
 import { ContactFormData } from "./form-schema";
 import React from "react";
 
@@ -70,33 +69,11 @@ export const formFields: FieldConfig[] = [
     fieldType: "input",
   },
   {
-    name: "role",
-    label: "Cargo",
-    component: Select,
-    options: ROLE_OPTIONS,
-    fieldType: "select",
-  },
-  {
-    name: "companySize",
-    label: "Tamanho da empresa",
-    component: Select,
-    options: COMPANY_SIZE_OPTIONS,
-    fieldType: "select",
-  },
-  {
     name: "field",
     label: "Área de atuação",
     placeholder: "Área de atuação",
     component: Input,
     layout: "col-span-1 md:col-span-2",
     fieldType: "input",
-  },
-  {
-    name: "projectDetails",
-    label: "Detalhes do projeto...",
-    component: Textarea,
-    placeholder: "Detalhes do projeto...",
-    layout: "col-span-1 md:col-span-2",
-    fieldType: "textarea",
   },
 ];

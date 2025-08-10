@@ -11,13 +11,7 @@ export const contactSchema = yup.object().shape({
     .required("O celular é obrigatório.")
     .matches(/^\(\d{2}\) \d{5}-\d{4}$/, "Formato de celular inválido."),
   company: yup.string().required("O nome da empresa é obrigatório."),
-  role: yup.string().required("O cargo é obrigatório."),
-  companySize: yup.string().required("O tamanho da empresa é obrigatório."),
   field: yup.string().required("A área de atuação é obrigatória."),
-  projectDetails: yup
-    .string()
-    .required("Os detalhes do projeto são obrigatórios.")
-    .min(20, "Descreva o projeto com mais detalhes (mínimo 20 caracteres)."),
 });
 
 export type ContactFormData = yup.InferType<typeof contactSchema>;

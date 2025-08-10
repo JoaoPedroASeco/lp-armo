@@ -19,26 +19,20 @@ export const ContactForm = () => {
       email: "",
       phone: "",
       company: "",
-      role: "Cargo",
-      companySize: "Tamanho da empresa",
-      projectDetails: "",
       field: "",
     },
   });
 
   const onSubmit: SubmitHandler<ContactFormData> = async (data) => {
-    console.log("Enviando dados:", data);
     try {
       await fetch("/api/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
-      alert("Formulário enviado com sucesso!");
       reset();
     } catch (error) {
       console.error("Erro ao enviar formulário:", error);
-      alert("Ocorreu um erro ao enviar. Tente novamente.");
     }
   };
 
